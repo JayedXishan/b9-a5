@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus ticket</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- tailwind & daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,10 +24,41 @@
     </header>
     <main>
         <!-- coupon section -->
-        <section>
-            <div class="couponContainer">
-                <div class="newCouponCon">
-                    <p>hi</p>
+        <section class="mx-auto w-[1171px]">
+            <div class="couponSection">
+                <h3 class="font-raleway text-center font-bold text-4xl">Best offers for you</h3>
+                <div class="couponContainer flex justify-between my-[48px]">
+                    <div class="newCoupon w-[573px] h-[220px] bg-[#FFBF0F] rounded-3xl flex justify-between p-10">
+                        <div class="border-r-2 border-dashed pr-[90px]">
+                            <h3 class="font-inter font-black text-[40px]">15% OFF
+                            </h3>
+                            <h3 class="font-inter font-semibold text-[20px]">on your next purchase
+                            </h3>
+                            <p class="font-inter font-medium text-lg">use by January 2024</p>
+                        </div>
+                        <div class=" text-center self-center">
+                            <h3 class="font-raleway font-bold text-3xl">NEW15
+                            </h3>
+                            <p class="font-raleway font-medium text-xl">Coupon Code</p>
+                        </div>
+                    </div>
+                    <div class="coupleCoupon w-[573px] h-[220px] bg-[#F78C9C] rounded-3xl flex justify-between p-10">
+                        <div class="border-r-2 border-dashed pr-[90px]">
+                            <h3 class="font-inter font-black text-[40px]">20% OFF
+                            </h3>
+                            <h3 class="font-inter font-semibold text-[20px]">on your next purchase
+                            </h3>
+                            <p class="font-inter font-medium text-lg">use by January 2024</p>
+                        </div>
+                        <div class=" text-center self-center">
+                            <h3 class="font-raleway font-bold text-3xl">Couple 20
+                            </h3>
+                            <p class="font-raleway font-medium text-xl">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button class="btn btn-outline btn-success text">See All Offers</button>
                 </div>
             </div>
         </section>
