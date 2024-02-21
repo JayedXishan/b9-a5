@@ -60,6 +60,8 @@ function updateClickCount(seatId) {
         const ticInfoHold = document.getElementById('ticInfoHolder');
         ticInfoHold.appendChild(clonedDiv);
 
+        const nextBtn=document.getElementById('next-btn');
+        nextBtn.removeAttribute('disabled');
 
     }
     else if (!clickCounters[seatId] && totalSelected >= 4) {

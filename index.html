@@ -20,8 +20,47 @@
 
 <body>
     <header>
+        <!-- nav -->
+        <div class="w-[1171px] mx-auto my-6">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="btn btn-ghost font-raleway font-extrabold text-[36px]">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-raleway">
+                        <li><a>Home</a></li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end text-green-300">
+                    <a class="btn">
+                        <span class="text-green-500">BUS</span>
+                        <img src="./images/bus-icon.png" alt="">
 
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner -->
+        <div class="w-[1171px] mx-auto">
+            <div class="hero min-h-screen bg-[url('./images/banner.png')] rounded-2xl my-[25px] mb-[80px]">
+                <div class="hero-content text-center">
+                    <div class="w-[700px]">
+                        <h1 class="font-raleway font-extrabold text-5xl text-white leading-[60px]">End-to-End Travel
+                            with <br> <span class="text-green-500">P Paribahan</span> </h1>
+                        <p class="py-6 text-white font-inter font-normal text-lg">Seamless Journeys Await: Book Your Bus
+                            Tickets with Ease and Travel Comfortably to Your Destination . Don't miss it !</p>
+                        <button class="btn bg-green-500 text-white border-none">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
     <main>
         <!-- coupon section -->
         <section class="mx-auto w-[1171px]">
@@ -64,12 +103,11 @@
         </section>
         <!-- ticket section -->
         <section
-            class="mx-auto my-[120px] bg-slate-100 border-t-[2px] border-green-500 rounded-tl-[7%] rounded-tr-[7%] ">
+            class="mx-auto mt-[120px] bg-slate-100 border-t-[2px] border-green-500 rounded-tl-[7%] rounded-tr-[7%] pb-14">
             <!-- ticket info -->
             <div class="w-[736px] mx-auto mt-[120px] text-center mb-[47px]">
                 <h3 class="font-raleway font-bold text-4xl mb-[20px]">P.H Paribahan</h3>
-                <p class="font-inter font-normal text-lg">Yes, you can run unit tests and view the results directly
-                    within the app. The integrated testing features allow for a streamlined .</p>
+                <p class="font-inter font-normal text-lg">Experience hassle free travel with our reliable bus services. Affordable fares, comfortable seats, and on time arrivals your journey, our priority. Book now for stress free travel adventures</p>
             </div>
             <div class="ticketInfoCon w-[1170px] bg-white p-[32px] mx-auto rounded-2xl flex  mb-[26px]">
                 <div class="ticketMain flex-auto border-r-2 border-green-300 border-dashed pr-12">
@@ -179,26 +217,62 @@
                             </div>
                         </div>
                         <div class="flex justify-between mb-2 mt-2">
-                            <h3 >Total Price</h3>
-                            <h3 >BDT <span id="total-price">0</span></h3>
+                            <h3>Total Price</h3>
+                            <h3>BDT <span id="total-price">0</span></h3>
                         </div>
                     </div>
 
                     <label id="offerField" class="input  flex items-center relative mt-4">
                         <input type="text" id="inputField" class="grow " placeholder="Have any coupon?" />
-                        <span id="btnForCoupon" class="btn bg-green-500 text-white px-8 absolute right-1" disabled>Apply</span>
+                        <span id="btnForCoupon" class="btn bg-green-500 text-white px-8 absolute right-1"
+                            disabled>Apply</span>
                     </label>
 
                     <div class="flex justify-between mb-2 mt-4 px-4">
                         <h3>Grand Total</h3>
                         <h3>BDT <span id="grandTotal">0</span></h3>
                     </div>
+
+                    <a href="secondary.html"><button id="next-btn" class="btn btn-block bg-green-400 text-white"
+                            disabled>Next</button></a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="">
+        <div>
+            <footer class="bg-neutral  ">
+                <div class="footer text-neutral-content px-24 py-14 flex justify-between">
+                    <aside>
+                        <h3 class="font-raleway font-extrabold text-[34px] mb-6">P-Ticket</h3>
+                        <p class="font-inter font-normal text-base">P-Ticket is a digital platform to make <br>your
+                            daily commuting better.</p>
+                    </aside>
+                    <nav>
+                        <h6 class="footer-title">Download our app</h6>
+                        <div
+                            class="grid grid-flow-col gap-4 content-center justify-center items-center border-[1px] px-4 py-2 rounded-2xl border-white">
+                            <img src="./images/playstore.png" alt="">
+                            <div>
+                                <span>Get it on</span><br>
+                                <p>Google play</p>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="px-24">
+                    <div class="flex justify-between text-neutral-content border-t-2 border-dashed border-neutral-500 py-14">
+                        <p>&copy;all rights reserved, P-Ticket services limited.2024</p>
+                        <div class="space-x-4">
+                            <span>Terms & condition</span>
+                            <span>Return & refund policy</span>
+                            <span>Privacy policy</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </footer>
 
     <!-- javascript dom -->

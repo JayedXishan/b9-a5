@@ -4,3 +4,7 @@
 .font-raleway{
      font-family: "Raleway", sans-serif;
 }
+
+#next-btn :disabled{
+    background-color: aqua;
+}
