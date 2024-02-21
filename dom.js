@@ -40,9 +40,16 @@ function updateClickCount(seatId) {
 
         updateSeat();
         updateRemSeat();
-
+        var totalPrice = calPrice(totalSelected);
         const div = document.getElementById('ticInfo');
-        
+        const grandTotal= document.getElementById('grandTotal');
+        grandTotal.innerText=totalPrice;
+        if(totalSelected==4){
+            const btn=document.getElementById('btnForCoupon');
+            btn.removeAttribute('disabled');
+            discount(totalPrice);
+        }
+
         div.classList.add('flex');
         const clonedDiv = div.cloneNode(true);
         clonedDiv.classList.remove('hidden');
@@ -52,6 +59,8 @@ function updateClickCount(seatId) {
 
         const ticInfoHold = document.getElementById('ticInfoHolder');
         ticInfoHold.appendChild(clonedDiv);
+
+
     }
     else if (!clickCounters[seatId] && totalSelected >= 4) {
         alert('Already selected 4 seats');
@@ -65,4 +74,42 @@ document.getElementById('seatContainer').addEventListener('click', function (eve
     }
 })
 
+// price calculation
+function calPrice(totalSelected){
+    var totalPrice = totalSelected * 550;
+    const tp=document.getElementById('total-price');
+    tp.innerText=totalPrice;
 
+    return totalPrice;
+}
+
+// discount
+function discount(totalPrice){
+    
+    document.getElementById('btnForCoupon').addEventListener('click',function(){
+   
+        const inputField=document.getElementById('inputField');
+        const inputText=inputField.value;
+
+        if(inputText==='NEW15'){
+            var grandPrice=totalPrice-(totalPrice*(15/100));
+            const grandTotal= document.getElementById('grandTotal');
+            grandTotal.innerText=grandPrice;
+
+            var offerField=document.getElementById('offerField');
+            offerField.classList.add('hidden');
+        }
+        else if(inputText==='Couple 20'){
+            var grandPrice=totalPrice-(totalPrice*(20/100));
+            const grandTotal= document.getElementById('grandTotal');
+            grandTotal.innerText=grandPrice;
+
+            var offerField=document.getElementById('offerField');
+            offerField.classList.add('hidden');
+        }
+
+        inputField.value='';
+
+    })
+
+}
