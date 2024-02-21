@@ -84,7 +84,8 @@
                         <div
                             class="ticketSeat w-[180px] h-[56px] bg-green-100 flex justify-evenly p-[20px] items-center rounded-2xl">
                             <img class="" src="./images/seat-gray.png" alt="">
-                            <p>8 seat left</p>
+                            <span id="remainingSeat">8</span>
+                            <p>seat left</p>
                         </div>
                     </div>
                     <div class="ticketBox w-[808px] bg-slate-100 h-auto p-[25px] rounded-2xl mt-[24px]">
@@ -129,27 +130,29 @@
                     </div>
                     <div class="mt-[20px]">
                         <div class="flex justify-end items-end ">
-                            <button class="btn px-[29px] bg-gray-300"><img src="./images/steering-wheel.png"
+                            <button class="btn px-[29px] bg-gray-300 "><img src="./images/steering-wheel.png"
                                     alt=""></button>
                         </div>
-                        <div class="flex justify-between">
-                            <div class="space-x-4 space-y-4">
-                                <button class="btn px-8">A1</button>
-                                <button class="btn px-8">A2</button>
+                        <div id="seatContainer">
+                            <div class="flex justify-between">
+                                <div class="space-x-4 space-y-4">
+                                    <button id="A1" class="clickable btn px-8 ">A1</button>
+                                    <button id="A2" class="clickable btn px-8">A2</button>
+                                </div>
+                                <div class="space-x-4 space-y-4">
+                                    <button id="A3" class="clickable btn px-8">A3</button>
+                                    <button id="A4" class="clickable btn px-8">A4</button>
+                                </div>
                             </div>
-                            <div class="space-x-4 space-y-4">
-                                <button class="btn px-8">A3</button>
-                                <button class="btn px-8">A4</button>
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="space-x-4 space-y-4">
-                                <button class="btn px-8">B1</button>
-                                <button class="btn px-8">B2</button>
-                            </div>
-                            <div class="space-x-4 space-y-4">
-                                <button class="btn px-8">B3</button>
-                                <button class="btn px-8">B4</button>
+                            <div class="flex justify-between">
+                                <div class="space-x-4 space-y-4">
+                                    <button id="B1" class="clickable btn px-8">B1</button>
+                                    <button id="B2" class="clickable btn px-8">B2</button>
+                                </div>
+                                <div class="space-x-4 space-y-4">
+                                    <button id="B3" class="clickable btn px-8">B3</button>
+                                    <button id="B4" class="clickable btn px-8">B4</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,20 +166,15 @@
                         <div class="flex justify-between mb-2">
                             <div class="flex space-x-1 justify-center">
                                 <h3>Seat</h3>
-                                <div class="badge bg-green-400 text-white">0</div>
+                                <div id="seatSelected" class="badge bg-green-400 text-white">0</div>
                             </div>
                             <h3>Class</h3>
                             <h3>Price</h3>
                         </div>
-                        <div class="border-y-2 border-dashed border-slate-200 py-4">
-                            <div class="flex justify-between mb-4">
-                                <p>A1</p>
-                                <p>Echonomic</p>
-                                <p>550</p>
-                            </div>
-                            <div class="flex justify-between mb-4">
-                                <p>A1</p>
-                                <p>Echonomic</p>
+                        <div id="ticInfoHolder" class="border-y-2 border-dashed border-slate-200 py-4">
+                            <div id="ticInfo" class="justify-between mb-4 hidden">
+                                <p id="paragraph1">A1</p>
+                                <p>Economic</p>
                                 <p>550</p>
                             </div>
                         </div>
@@ -188,7 +186,7 @@
 
                     <label class="input  flex items-center relative mt-4">
                         <input type="text" class="grow " placeholder="Have any coupon?" />
-                        <span class="btn bg-green-500 text-white px-8 absolute right-1 ">Apply</span>
+                        <span class="btn bg-green-500 text-white px-8 absolute right-1">Apply</span>
                     </label>
 
                     <div class="flex justify-between mb-2 mt-4 px-4">
